@@ -1,0 +1,16 @@
+
+#ifndef __com_sun_star_sheet_addin_xsp500addin_idl__
+#define __com_sun_star_sheet_addin_xsp500addin_idl__
+
+#include <com/sun/star/uno/XInterface.idl>
+
+module com { module sun { module star { module sheet { module addin {
+                interface XSP500Addin : com::sun::star::uno::XInterface
+                {
+                    string getTicker( [in] long nIdx );
+                    string getName( [in] string aTicker );
+                };
+
+                service SP500Addin : XSP500Addin;
+                
+}; }; }; }; };
